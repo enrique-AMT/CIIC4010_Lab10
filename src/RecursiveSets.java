@@ -19,12 +19,13 @@ public class RecursiveSets {
 								ss.add(s);
 							else {
 								String st;
+								String rmvd = s.substring(0,1);
 								st = s.substring(1); // remove the first element in set (first char in string)
 								ArrayList<String> tSS = subsets(st);
 								for (String r : tSS)
 									ss.add(r);
 								for (String r : tSS)
-									ss.add(s+r);
+									ss.add(rmvd+r);
 							}
 					return ss;
 		}
